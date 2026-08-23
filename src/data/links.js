@@ -50,12 +50,12 @@ export const links = [
   },
   {
     id: 2,
-    title: "YouTube Video Tutorial",
-    description: "Video pembahasan lengkap, ditonton setelah verifikasi.",
-    gatewayUrl: "https://shortlink-pihak-ketiga.contoh.com/x1",
+    title: "",
+    description: "Resume aidil. password : 123456",
+    gatewayUrl: "",
     url: "https://youtube.com",
-    password: "abc123",
-    selfHosted: false,
+    password: "123456",
+    selfHosted: true,
   },
   {
     id: 3,
