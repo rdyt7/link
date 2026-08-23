@@ -1,0 +1,129 @@
+<!doctype html>
+<!--
+  CONTOH GATEWAY MILIK SENDIRI
+  ============================
+  Ini BUKAN bagian dari aplikasi React — ini contoh halaman terpisah
+  yang kamu deploy di domain gateway kamu sendiri (mis. sebagai
+  gatewayUrl: "https://gateway.punyamu.com/verify").
+
+  Kontrak query string yang dikirim oleh aplikasi React:
+    ?redirect=<url tujuan akhir, sudah di-encode>
+    &token=<token sekali pakai>
+    &return=<url untuk kembali ke app React, sudah di-encode>
+
+  Tugas halaman ini:
+    1. Baca ketiga parameter di atas.
+    2. Jalankan proses apa pun yang kamu mau (mis. tampilkan iklan,
+       hitung mundur, verifikasi tambahan, dll).
+    3. Setelah proses selesai, redirect browser ke URL pada
+       parameter `return` — JANGAN redirect langsung ke `redirect`,
+       karena `return` sudah membawa token yang dibutuhkan aplikasi
+       React untuk tahu bahwa proses ini benar-benar selesai.
+
+  Aplikasi React akan membaca token itu, mencocokkannya dengan yang
+  tersimpan di sessionStorage-nya sendiri, lalu otomatis membuka
+  `url` tujuan akhir. Kalau kamu meng-hosting gateway ini di domain
+  yang berbeda dari aplikasi React, pastikan proses redirect balik
+  tetap terjadi di TAB YANG SAMA (bukan window.open tab baru),
+  supaya sessionStorage yang menyimpan token bisa terbaca lagi.
+-->
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Verifikasi Gateway</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        background: #eef0e8;
+        color: #1d2420;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 24px;
+      }
+      .box {
+        max-width: 420px;
+        background: #f8f9f4;
+        border: 1px solid rgba(29, 36, 32, 0.12);
+        border-radius: 16px;
+        padding: 32px;
+        text-align: center;
+      }
+      h1 {
+        font-size: 20px;
+        margin: 0 0 12px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #4b564e;
+      }
+      button {
+        margin-top: 20px;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 10px;
+        background: #3552d6;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      code {
+        word-break: break-all;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>Proses verifikasi gateway</h1>
+      <p id="status">Menyiapkan proses&hellip;</p>
+      <button id="continue-btn" disabled>Lanjutkan &amp; Kembali ke Aplikasi</button>
+    </div>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const redirectUrl = params.get("redirect");
+      const token = params.get("token");
+      const returnUrl = params.get("return");
+
+      const statusEl = document.getElementById("status");
+      const btn = document.getElementById("continue-btn");
+
+      if (!redirectUrl || !token || !returnUrl) {
+        statusEl.textContent =
+          "Parameter tidak lengkap. Halaman ini harus diakses lewat aplikasi Pustaka Tautan.";
+      } else {
+        statusEl.textContent =
+          "Contoh proses gateway sedang berjalan (mis. iklan/verifikasi tambahan)...";
+
+        // Simulasikan proses apa pun yang kamu mau di sini
+        // (menunggu iklan selesai, hitung mundur, dsb).
+        let seconds = 3;
+        const interval = setInterval(() => {
+          seconds -= 1;
+          if (seconds <= 0) {
+            clearInterval(interval);
+            statusEl.textContent = "Proses selesai. Klik tombol untuk kembali.";
+            btn.disabled = false;
+          } else {
+            statusEl.textContent = `Proses selesai dalam ${seconds} detik...`;
+          }
+        }, 1000);
+
+        btn.addEventListener("click", () => {
+          // PENTING: redirect ke `returnUrl`, bukan ke `redirectUrl`.
+          // returnUrl sudah membawa token yang dicocokkan aplikasi React.
+          window.location.href = returnUrl;
+        });
+      }
+    </script>
+  </body>
+</html>
