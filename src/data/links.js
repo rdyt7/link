@@ -41,7 +41,7 @@
 export const links = [
   {
     id: 1,
-    title: "Google Drive Materi Kelas",
+    title: "Google Drive Materi Kelass",
     description: "Kumpulan slide dan modul kelas minggu ini.",
     gatewayUrl: "https://docs.google.com/document/d/1Z7_ea6Bhokh7zv4l1tR1L0PJqG03RqM-USb8InRh-6I/edit?usp=sharing",
     url: "https://docs.google.com/document/d/1Z7_ea6Bhokh7zv4l1tR1L0PJqG03RqM-USb8InRh-6I/edit?usp=sharing",
@@ -50,10 +50,10 @@ export const links = [
   },
   {
     id: 2,
-    title: "",
+    title: "resume aidil",
     description: "Resume aidil. password : 123456",
-    gatewayUrl: "https://rdyt7.github.io/link/",
-    url: "https://youtube.com",
+    gatewayUrl: "https://drive.google.com/drive/folders/1IoPw8MHzsAZOMLFo_3Z6cyiFXPA_HfZN?usp=sharing",
+    url: "https://drive.google.com/drive/folders/1IoPw8MHzsAZOMLFo_3Z6cyiFXPA_HfZN?usp=sharing",
     password: "123456",
     selfHosted: true,
   },
