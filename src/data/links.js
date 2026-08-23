@@ -52,7 +52,7 @@ export const links = [
     id: 2,
     title: "",
     description: "Resume aidil. password : 123456",
-    gatewayUrl: "",
+    gatewayUrl: "https://rdyt7.github.io/link/",
     url: "https://youtube.com",
     password: "123456",
     selfHosted: true,
