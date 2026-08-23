@@ -41,11 +41,11 @@
 export const links = [
   {
     id: 1,
-    title: "Google Drive Materi Kelass",
-    description: "Kumpulan slide dan modul kelas minggu ini.",
-    gatewayUrl: "https://docs.google.com/document/d/1Z7_ea6Bhokh7zv4l1tR1L0PJqG03RqM-USb8InRh-6I/edit?usp=sharing",
-    url: "https://docs.google.com/document/d/1Z7_ea6Bhokh7zv4l1tR1L0PJqG03RqM-USb8InRh-6I/edit?usp=sharing",
-    password: "123456",
+    title: "Tugas Tugas",
+    description: "Kumpulan Tugas Tugas",
+    gatewayUrl: "https://docs.google.com/document/d/1DytftOiApJjsiHyylE1f4YspQQyupShza0Y66zNRwFc/edit?usp=sharing",
+    url: "https://docs.google.com/document/d/1DytftOiApJjsiHyylE1f4YspQQyupShza0Y66zNRwFc/edit?usp=sharing",
+    password: "090909",
     selfHosted: true,
   },
   {
@@ -60,11 +60,29 @@ export const links = [
   {
     id: 3,
     title: "GitHub Source Code",
-    description: "Repository kode sumber untuk proyek ini.",
-    gatewayUrl: "https://shortlink-pihak-ketiga.contoh.com/x2",
-    url: "https://github.com",
-    password: "opensesame",
-    selfHosted: false,
+    description: "Repository kode sumber untuk proyek yang ada.",
+    gatewayUrl: "https://github.com/rdyt7",
+    url: "https://github.com/rdyt7",
+    password: "git_raditya",
+    selfHosted: true,
+  },
+    {
+    id: 4,
+    title: "Sharing Google Doc",
+    description: "Sharing tulisan dan document.",
+    gatewayUrl: "https://docs.google.com/document/d/1NFMogHgn1wT4dB-2cQCaj-lJjEdDErWRAeAfUXPKXl8/edit?usp=sharing",
+    url: "https://docs.google.com/document/d/1NFMogHgn1wT4dB-2cQCaj-lJjEdDErWRAeAfUXPKXl8/edit?usp=sharing",
+    password: "umum",
+    selfHosted: true,
+  },
+    {
+    id: 5,
+    title: "Sharing Khusus",
+    description: "Sharing tulisan dan document.",
+    gatewayUrl: "https://docs.google.com/document/d/1OiNIWL7DV6Ysk8Dct51EQ_hOO4juwlZlcs9CQNCPk_E/edit?usp=sharing",
+    url: "https://docs.google.com/document/d/1OiNIWL7DV6Ysk8Dct51EQ_hOO4juwlZlcs9CQNCPk_E/edit?usp=sharing",
+    password: "enterpassword",
+    selfHosted: true,
   },
 ];
 
