@@ -50,7 +50,7 @@ export const links = [
   },
   {
     id: 2,
-    title: "resume aidil",
+    title: "resume aidil 23 agustus",
     description: "Resume aidil. password : 123456",
     gatewayUrl: "https://drive.google.com/drive/folders/1IoPw8MHzsAZOMLFo_3Z6cyiFXPA_HfZN?usp=sharing",
     url: "https://drive.google.com/drive/folders/1IoPw8MHzsAZOMLFo_3Z6cyiFXPA_HfZN?usp=sharing",
