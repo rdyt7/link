@@ -108,7 +108,7 @@ export default function GatewayModal({
                 Buka Lagi Tab Perantara
               </button>
               <button className="gateway-modal__primary" onClick={onManualContinue}>
-                Lanjutkan ke Link Tujuan
+                Lanjutkan ke Link Tujuan.
               </button>
             </div>
           </div>
