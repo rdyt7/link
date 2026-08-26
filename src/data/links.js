@@ -42,7 +42,7 @@ export const links = [
   {
     id: 1,
     title: "Tugas Tugas",
-    description: "Kumpulan Tugas Tugas",
+    description: "Kumpulan Tugas-Tugas",
     gatewayUrl: "https://docs.google.com/document/d/1DytftOiApJjsiHyylE1f4YspQQyupShza0Y66zNRwFc/edit?usp=sharing",
     url: "https://docs.google.com/document/d/1DytftOiApJjsiHyylE1f4YspQQyupShza0Y66zNRwFc/edit?usp=sharing",
     password: "090909",
@@ -66,7 +66,7 @@ export const links = [
     password: "git_raditya",
     selfHosted: true,
   },
-    {
+  {
     id: 4,
     title: "Sharing Google Doc",
     description: "Sharing tulisan dan document.",
@@ -75,7 +75,7 @@ export const links = [
     password: "umum",
     selfHosted: true,
   },
-    {
+  {
     id: 5,
     title: "Sharing Khusus",
     description: "Sharing tulisan dan document.",
