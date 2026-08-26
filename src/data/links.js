@@ -51,7 +51,7 @@ export const links = [
   {
     id: 2,
     title: "Materi",
-    description: "Semua Materi Kelas",
+    description: "Semua Materi Kelas B6",
     gatewayUrl: "https://drive.google.com/drive/folders/1Kw7CODc7OxQGzrKpizytkzZuOlh2hmDA?usp=sharing",
     url: "https://drive.google.com/drive/folders/1Kw7CODc7OxQGzrKpizytkzZuOlh2hmDA?usp=sharing",
     password: "materiajar",
