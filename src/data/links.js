@@ -84,6 +84,15 @@ export const links = [
     password: "enterpassword",
     selfHosted: true,
   },
+  {
+    id: 6,
+    title: "Pembagian Tugas DIR",
+    description: "Sharing tulisan dan document.",
+    gatewayUrl: "https://docs.google.com/document/d/1OiNIWL7DV6Ysk8Dct51EQ_hOO4juwlZlcs9CQNCPk_E/edit?usp=sharing",
+    url: "https://docs.google.com/document/d/1OiNIWL7DV6Ysk8Dct51EQ_hOO4juwlZlcs9CQNCPk_E/edit?usp=sharing",
+    password: "dir",
+    selfHosted: true,
+  },
 ];
 
 // Contoh card baru:
